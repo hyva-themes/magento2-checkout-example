@@ -48,9 +48,10 @@ module.exports = {
                 ...config.resolve,
                 alias: {
                     ...config.resolve.alias,
-                    react: 'preact/compat',
-                    'react-dom': 'preact/compat',
-                    '@hyva/react-checkout': parentPath // Add an alias to convert paths to their parent source
+                    '@hyva/react-checkout': parentPath, // Add an alias to convert paths to their parent source
+		    '@hyva/payments': path.resolve('../../../../../', parentPath),
+		    react: path.resolve(parentPath, '..', './node_modules/react'),
+		    reactDom: path.resolve(parentPath, '..', './node_modules/react-dom')
                 },
                 plugins: [
                     // Include the Hyva Inheritance plugin

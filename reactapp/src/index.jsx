@@ -10,17 +10,17 @@ import AppDataProvider from '@hyva/react-checkout/context/App/AppDataProvider';
 import RootElement from '@hyva/react-checkout/utils/rootElement';
 
 function Checkout() {
-    return (
-        <AppDataProvider>
-            <CartDataProvider>
-                <CheckoutFormProvider>
-                    <StepProvider>
-                        <CheckoutForm />
-                    </StepProvider>
-                </CheckoutFormProvider>
-            </CartDataProvider>
-        </AppDataProvider>
-    );
+  return (
+    <AppDataProvider>
+      <CartDataProvider>
+        <CheckoutFormProvider>
+          <StepProvider>
+            <CheckoutForm />
+          </StepProvider>
+        </CheckoutFormProvider>
+      </CartDataProvider>
+    </AppDataProvider>
+  );
 }
 
 ReactDOM.render(<Checkout />, RootElement.getElement());
