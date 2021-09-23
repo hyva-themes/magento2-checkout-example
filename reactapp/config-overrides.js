@@ -3,8 +3,9 @@ const path = require('path');
 const { aliasDangerous } = require('react-app-rewire-alias/lib/aliasDangerous');
 const HyvaInheritancePlugin = require('./webpack-hyva-inheritance-plugin');
 
-const hyvaCheckoutVendorPath =
-  '../../../../../vendor/hyva-themes/magento2-hyva-checkout/src/reactapp/src';
+const hyvaCheckoutVendorPath = path.resolve(
+  '../../../../../vendor/hyva-themes/magento2-hyva-checkout/src/reactapp/src'
+);
 
 /**
  * CRA (create-react-app) supports only one source directory. aliasDangerous
@@ -51,7 +52,7 @@ module.exports = function override(config, env) {
          * by copy it over to the src directory.
          */
         new HyvaInheritancePlugin({
-          parentPath: path.resolve(hyvaCheckoutVendorPath),
+          parentPath: hyvaCheckoutVendorPath,
           childPath: path.resolve(__dirname, 'src'),
         }),
       ],
