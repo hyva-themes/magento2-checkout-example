@@ -36,10 +36,10 @@
     "eject": "react-app-rewired eject",
     "precommit": "lint-staged",
     "app:start": "react-app-rewired start",
-    "prestart": "cd ../view/frontend/web/css/tailwind/ && npm run build-dev",
-    "prebuild": "cd ../view/frontend/web/css/tailwind/ && npm run build-prod",
-    "tailwind-install": "cd ../view/frontend/web/css/tailwind/ && npm install && cd ../../../../../reactapp/",
-    "tailwind-update": "cd ../view/frontend/web/css/tailwind/ && npm update && cd ../../../../../reactapp/"
+    "prestart": "npm run build-dev --prefix ../view/frontend/web/css/tailwind/",
+    "prebuild": "npm run build-prod --prefix ../view/frontend/web/css/tailwind/",
+    "tailwind-install": "npm install --prefix ../view/frontend/web/css/tailwind/",
+    "tailwind-update": "npm update --prefix ../view/frontend/web/css/tailwind/"
   },
   "lint-staged": {
     "src/*.{js,jsx,json,scss,css,md}": [
