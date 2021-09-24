@@ -1,7 +1,7 @@
 # Yireo Example Hyva React Checkout
 ## Magento 2 module for extending upon the Hyva Checkout module
 
-Yireo Example Hyva React Checkout? Yes, that's a lot of buzzwords. This example module adds a custom Webpack configuration, so that you can extend upon the React sources of the original Hyva Checkout module. In effect, this allows for kind of a parent/child theming mechanism, not for the entire Hyva theme, but only for the specific React sources in your custom checkout.  
+Yireo Example Hyva React Checkout? Yes, that's a lot of buzzwords. This example module adds a custom Webpack configuration, so that you can extend upon the React sources of the original Hyva Checkout module. In effect, this allows for kind of a parent/child theming mechanism, not for the entire Hyva theme, but only for the specific React sources in your custom checkout.
 
 ## Installation
 - Install Hyvä Checkout via composer. You can find more details in the [**official documentation**](https://hyva-themes.github.io/magento2-hyva-checkout/installation/)

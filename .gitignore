@@ -1,0 +1,4 @@
+reactapp/node_modules
+reactapp/package-lock.json
+.env
+view/frontend/web/js/react-checkout.js
