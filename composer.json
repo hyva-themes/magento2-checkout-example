@@ -1,7 +1,7 @@
 {
-  "name": "yireo/example-hyva-checkout",
+  "name": "hyva-themes/magento2-checkout-example",
   "version": "1.0.0",
-  "description": "N/A",
+  "description": "The right way to modify Hyvä Checkout Magento 2 module.",
   "type": "magento2-module",
   "require": {
     "magento/framework": "*"
@@ -14,7 +14,7 @@
       "registration.php"
     ],
     "psr-4": {
-      "Yireo\\ExampleHyvaCheckout\\": ""
+      "Hyva\\CheckoutExample\\": ""
     }
   }
 }
