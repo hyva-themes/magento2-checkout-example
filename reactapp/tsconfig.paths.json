@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@hyva/react-checkout": [
+        "../../../../../vendor/hyva-themes/magento2-hyva-checkout/src/reactapp/src"
+      ]
+    }
+  }
+}

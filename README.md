@@ -11,7 +11,7 @@ Currently, there are two ways to approach this issue. You can fork Hyvä Checkou
 
 This module template helps you in this situation. It allows you to use the Hyvä Checkout as a composer dependency. You are exclusively working on this module which actually resides in the `app/code` directory. It allows you to edit only those React Components you really need to customize it. Eventually, you know which all React files you have customized. Hyvä Checkout is now completely separate and you can bring the updates if you need it without any headaches.
 
-We highly recommend to go for this approach when it comes to customize Hyvä Checkout.
+We highly recommend going for this approach when it comes to customize Hyvä Checkout.
 
 ## Installation
 - Install Hyvä Checkout via composer. You can find more details in the [**official documentation**](https://hyva-themes.github.io/magento2-hyva-checkout/installation/)
@@ -21,10 +21,12 @@ We highly recommend to go for this approach when it comes to customize Hyvä Che
     - Run setup upgrade with `bin/magento setup:upgrade`
 
 - Setup ReactApp (See: [How to customize Hyvä Checkout](https://hyva-themes.github.io/magento2-hyva-checkout/customize/))
-    - Navigate into `app/code/Hyva/CheckoutExample/reactapp`
+    - Specify payment methods repositories (if any) in `app/code/Hyva/CheckoutExample/reactapp/package.json`.
+    - Navigate into `app/code/Hyva/CheckoutExample/reactapp`.
     - Run `npm install` (do not use `yarn`)
 
 - Start ReactApp
+    - Update `proxy` setting in `app/code/Hyva/CheckoutExample/reactapp/package.json` with the base url of your magento instance.
     - Copy the `env.example` file into `.env` and modify its contents
     - Run `npm run start`
 
@@ -33,6 +35,16 @@ Please remember this is a template. So you can name this module as you wish. The
 - registration.php
 - composer.json
 - etc/module.xml
+- Change template as per your module name at `view/frontend/layout/hyvacheckout_checkout_index.xml`
+  
+    ```
+    <referenceBlock name="checkout.scripts" template="Hyva_CheckoutExample::react-script.phtml" />
+    ```
+- Change js file reference at `view/frontend/templates/react-script.phtml`
+
+    ```
+    newScript.src = '<?= $escaper->escapeUrl($block->getViewFileUrl('Hyva_CheckoutExample::js/react-checkout.js')); ?>';
+    ```
 
 ## Copying React components
 As an example you could copy the original `LoginForm.jsx` component and make some modifications to hit, like adding a simple `Hello World`. Copy the original path `vendor/hyva-themes/magento2-hyva-checkout/src/reactapp/src/components/login/components/LoginForm.jsx` into `app/code/Hyva/CheckoutExample/reactapp/src/components/login/components/LoginForm.jsx`.
@@ -55,7 +67,15 @@ import useLoginFormContext from '@hyva/react-checkout/components/login/hooks/use
 import {__} from '@hyva/react-checkout/i18n';
 ```
 
-Note that the NPM package `@hyva/react-checkout` actually does not (yet) exist. It is a Webpack alias pointing to the path `vendor/hyva-themes/magento2-hyva-checkout/src/reactapp/src`.
+Note that the NPM package `@hyva/react-checkout` actually does not (yet) exist. It is a Webpack alias pointing to 
+the path `vendor/hyva-themes/magento2-hyva-checkout/src/reactapp/src`.
+
+## Payment Integrations
+With Hyvä Checkout, you may need to use existing payment repositories. They will work out of box with Hyvä Checkout 
+repository. But you may face issues when you use them inside the template. This is because it is failing to load the
+relative imports. You need to use `@hyva/react-checkout` for all those non-resolving imports.
+
+There will be solution for this problem in those repositories. So always pay attention in the payment repositories documentation.
 
 ## Credits
 The brain behind this idea is [**Jisse Reitsma**](https://github.com/jissereitsma). You can find his original work here: [**Yireo_ExampleHyvaCheckout**](https://github.com/yireo-training/Yireo_ExampleHyvaCheckout).
