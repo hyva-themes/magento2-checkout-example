@@ -3,7 +3,7 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
     <module name="Hyva_CheckoutExample">
         <sequence>
-            <module name="Hyva_Checkout"/>
+            <module name="Hyva_ReactCheckout"/>
         </sequence>
     </module>
 </config>
