@@ -20,7 +20,7 @@ We highly recommend going for this approach when it comes to customize Hyvä Che
     - Enable your module with `bin/magento module:enable Hyva_CheckoutExample`
     - Run setup upgrade with `bin/magento setup:upgrade`
 
-- Setup ReactApp (See: [How to customize Hyvä Checkout](https://hyva-themes.github.io/magento2-hyva-checkout/customize/))
+- Setup ReactApp (See: [How to customize Hyvä Checkout](https://hyva-themes.github.io/magento2-react-checkout/customize/))
     - Specify payment methods repositories (if any) in `app/code/Hyva/CheckoutExample/reactapp/package.json`.
     - Navigate into `app/code/Hyva/CheckoutExample/reactapp`.
     - Run `npm install` (do not use `yarn`)
@@ -35,7 +35,7 @@ Please remember this is a template. So you can name this module as you wish. The
 - registration.php
 - composer.json
 - etc/module.xml
-- Change template as per your module name at `view/frontend/layout/react_checkout_checkout_index.xml`
+- Change template as per your module name at `view/frontend/layout/hyva_reactcheckout_index.xml`
   
     ```
     <referenceBlock name="checkout.scripts" template="Hyva_CheckoutExample::react-script.phtml" />
