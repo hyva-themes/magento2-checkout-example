@@ -1,6 +1,5 @@
 {
   "name": "hyva-themes/magento2-checkout-example",
-  "version": "1.0.0",
   "description": "The right way to modify Hyvä React Checkout Magento 2 module.",
   "type": "magento2-module",
   "require": {
