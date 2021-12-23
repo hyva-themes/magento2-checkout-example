@@ -4,7 +4,7 @@ const { aliasDangerous } = require('react-app-rewire-alias/lib/aliasDangerous');
 const HyvaInheritancePlugin = require('./webpack-hyva-inheritance-plugin');
 
 const hyvaCheckoutVendorPath = path.resolve(
-  '../../../../../vendor/hyva-themes/magento2-hyva-checkout/src/reactapp/src'
+  '../../../../../vendor/hyva-themes/magento2-react-checkout/src/reactapp/src'
 );
 
 /**
