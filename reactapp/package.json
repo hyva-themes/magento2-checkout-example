@@ -14,7 +14,7 @@
   "proxy": "https://demo.hyva.io",
   "dependencies": {
     "@heroicons/react": "^1.0.1",
-    "@hyva/react-checkout": "file:../../../../../vendor/hyva-themes/magento2-hyva-checkout/src/reactapp/src",
+    "@hyva/react-checkout": "file:../../../../../vendor/hyva-themes/magento2-react-checkout/src/reactapp/src",
     "formik": "^2.2.6",
     "lodash.get": "^4.4.2",
     "lodash.set": "^4.3.2",
