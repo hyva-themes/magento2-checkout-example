@@ -35,8 +35,8 @@ Please remember this is a template. So you can name this module as you wish. The
 - registration.php
 - composer.json
 - etc/module.xml
-- Change template as per your module name at `view/frontend/layout/hyva_reactcheckout_index.xml`
-  
+- Change template as per your module name at `view/frontend/layout/hyvareactcheckout_reactcheckout_index.xml`
+
     ```
     <referenceBlock name="checkout.scripts" template="Hyva_CheckoutExample::react-script.phtml" />
     ```
@@ -67,11 +67,11 @@ import useLoginFormContext from '@hyva/react-checkout/components/login/hooks/use
 import {__} from '@hyva/react-checkout/i18n';
 ```
 
-Note that the NPM package `@hyva/react-checkout` actually does not (yet) exist. It is a Webpack alias pointing to 
+Note that the NPM package `@hyva/react-checkout` actually does not (yet) exist. It is a Webpack alias pointing to
 the path `vendor/hyva-themes/magento2-react-checkout/src/reactapp/src`.
 
 ## Payment Integrations
-With the React Checkout, you may need to use existing payment repositories. They will work out of box with the React Checkout 
+With the React Checkout, you may need to use existing payment repositories. They will work out of box with the React Checkout
 repository. But you may face issues when you use them inside the template. This is because it is failing to load the
 relative imports. You need to use `@hyva/react-checkout` for all those non-resolving imports.
 
