@@ -62,8 +62,19 @@ module.exports = function override(config, env) {
   if (isEnvProduction) {
     baseConfig.resolve.alias = {
       ...baseConfig.resolve.alias,
-      react: 'preact/compat',
-      'react-dom': 'preact/compat',
+        /**
+         * Prevent React version mismatch between this checkout
+         * and the one in vendor
+         * See: https://github.com/hyva-themes/magento2-checkout-example/issues/19
+         */
+      react: path.resolve('./node_modules/preact/compat'),
+      'react-dom': path.resolve('./node_modules/preact/compat')
+        /**
+         * If you want to use the full React version instead of Preact,
+         * comment out the two values above and enable the lines below
+         */
+      // react: path.resolve('./node_modules/react'),
+      // 'react-dom': path.resolve('./node_modules/react-dom'),
     };
   }
 
