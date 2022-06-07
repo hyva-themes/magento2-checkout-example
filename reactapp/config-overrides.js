@@ -47,13 +47,8 @@ module.exports = function override(config, env) {
       filename,
       chunkFilename,
     },
-    plugins: [...config.plugins, new LodashModuleReplacementPlugin()],
     resolve: {
       ...config.resolve,
-      alias: {
-        ...config.resolve.alias,
-        'lodash-es': 'lodash',
-      },
       plugins: [
         /**
          * Allow us to modify only those React Component needs to be customized
@@ -68,8 +63,13 @@ module.exports = function override(config, env) {
   };
 
   if (isEnvProduction) {
+    newConfig.plugins = [
+      ...newConfig.plugins,
+      new LodashModuleReplacementPlugin({ paths: true }),
+    ];
     newConfig.resolve.alias = {
       ...newConfig.resolve.alias,
+      lodash: 'lodash-es',
       /**
        * Prevent React version mismatch between this checkout
        * and the one in vendor
