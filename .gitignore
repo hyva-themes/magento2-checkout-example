@@ -1,3 +1,4 @@
 reactapp/node_modules
 reactapp/package-lock.json
 .env
+.idea
