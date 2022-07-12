@@ -1,6 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const path = require('path');
-const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const { aliasDangerous } = require('react-app-rewire-alias/lib/aliasDangerous');
 
 const HyvaInheritancePlugin = require('./scripts/webpack-hyva-inheritance-plugin');
@@ -63,10 +62,6 @@ module.exports = function override(config, env) {
   };
 
   if (isEnvProduction) {
-    newConfig.plugins = [
-      ...newConfig.plugins,
-      new LodashModuleReplacementPlugin({ paths: true }),
-    ];
     newConfig.resolve.alias = {
       ...newConfig.resolve.alias,
       lodash: 'lodash-es',
