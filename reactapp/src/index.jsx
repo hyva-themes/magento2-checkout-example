@@ -4,7 +4,6 @@ import { createRoot } from 'react-dom/client';
 
 import RootElement from '@hyva/react-checkout/utils/rootElement';
 import CheckoutForm from '@hyva/react-checkout/components/CheckoutForm';
-import StepProvider from '@hyva/react-checkout/context/Form/Step/StepProvider';
 import AppDataProvider from '@hyva/react-checkout/context/App/AppDataProvider';
 import CartDataProvider from '@hyva/react-checkout/context/Cart/CartDataProvider';
 import CheckoutFormProvider from '@hyva/react-checkout/context/Form/CheckoutFormProvider';
@@ -16,9 +15,7 @@ function Checkout() {
     <AppDataProvider>
       <CartDataProvider>
         <CheckoutFormProvider>
-          <StepProvider>
-            <CheckoutForm />
-          </StepProvider>
+          <CheckoutForm />
         </CheckoutFormProvider>
       </CartDataProvider>
     </AppDataProvider>
