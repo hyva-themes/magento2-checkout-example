@@ -27,7 +27,7 @@
     "yup": "^0.32.11"
   },
   "scripts": {
-    "preinstall": "node scripts/configurePaymentMethods",
+    "preinstall": "node scripts/configureCheckoutIntegrations",
     "start": "npm run app:start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
