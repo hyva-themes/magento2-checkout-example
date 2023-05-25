@@ -93,7 +93,8 @@ module.exports = {
   plugins: [forms],
   content: [
     './src/**/*.jsx',
-    '../view/frontend/templates/*.phtml',
+    '../view/frontend/templates/**/*.phtml',
     '../../../../../vendor/hyva-themes/magento2-react-checkout/src/reactapp/src/**/*.jsx',
+    '../../../../../vendor/hyva-themes/magento2-react-checkout/src/view/frontend/templates/**/*.phtml',
   ],
 };
