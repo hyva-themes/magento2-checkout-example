@@ -2,6 +2,6 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
     <event name="hyva_config_generate_before">
-        <observer name="hyva_react_checkout" instance="Hyva\ReactCheckout\Observer\RegisterModuleForHyvaConfig"/>
+        <observer name="hyva_react_checkout_example" instance="Hyva\CheckoutExample\Observer\RegisterModuleForHyvaConfig"/>
     </event>
 </config>
